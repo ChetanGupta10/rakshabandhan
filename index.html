@@ -1,1 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Raksha Bandhan ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+/* MAIN CONTAINER */
+
+.container{
+    display:flex;
+    width:800%;
+    height:100vh;
+    transition:transform 0.7s ease;
+}
+
+/* SLIDES */
+
+.slide{
+    width:100vw;
+    height:100vh;
+    flex-shrink:0;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:25px;
+
+    color:white;
+
+    overflow:hidden;
+}
+
+/* MESSAGE SLIDE */
+
+.message-slide{
+    justify-content:flex-start;
+    padding-top:45px;
+}
+
+/* MESSAGE */
+
+.message{
+    width:90%;
+    max-width:550px;
+
+    font-size:15px;
+    line-height:1.8;
+
+    max-height:62vh;
+
+    overflow-y:auto;
+
+    padding:5px 10px;
+}
+
+/* Hide scrollbar */
+
+.message::-webkit-scrollbar{
+    width:4px;
+}
+
+.message::-webkit-scrollbar-thumb{
+    background:rgba(255,255,255,0.5);
+    border-radius:10px;
+}
+
+/* BACKGROUNDS */
+
+.slide:nth-child(1){
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+}
+
+.slide:nth-child(2){
+    background:linear-gradient(135deg,#ff512f,#dd2476);
+}
+
+.slide:nth-child(3){
+    background:linear-gradient(135deg,#8e2de2,#4a00e0);
+}
+
+.slide:nth-child(4){
+    background:linear-gradient(135deg,#ff9966,#ff5e62);
+}
+
+.slide:nth-child(5){
+    background:linear-gradient(135deg,#7f00ff,#e100ff);
+}
+
+.slide:nth-child(6){
+    background:linear-gradient(135deg,#f953c6,#b91d73);
+}
+
+.slide:nth-child(7){
+    background:linear-gradient(135deg,#ee0979,#ff6a00);
+}
+
+.slide:nth-child(8){
+    background:linear-gradient(135deg,#141e30,#243b55);
+}
+
+/* HEADING */
+
+h1{
+    margin-bottom:20px;
+    font-size:30px;
+}
+
+h2{
+    margin-bottom:15px;
+}
+
+/* PHOTO */
+
+.photo{
+    width:85%;
+    max-width:330px;
+
+    max-height:65vh;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+
+    object-fit:cover;
+}
+
+/* BUTTON */
+
+button{
+    margin-top:20px;
+
+    padding:12px 28px;
+
+    border:none;
+    border-radius:30px;
+
+    background:white;
+    color:#e91e63;
+
+    font-size:16px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+/* INPUT */
+
+input{
+    padding:12px 20px;
+
+    border:none;
+    border-radius:30px;
+
+    font-size:16px;
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+    width:75%;
+    max-width:300px;
+
+    outline:none;
+}
+
+/* RAKHI ICON */
+
+.rakhi{
+    font-size:65px;
+    margin-bottom:15px;
+
+    animation:float 2s ease-in-out infinite;
+}
+
+@keyframes float{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    h1{
+        font-size:24px;
+    }
+
+    .message{
+        font-size:14px;
+        line-height:1.75;
+        max-height:60vh;
+    }
+
+    .photo{
+        width:90%;
+        max-height:60vh;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container" id="container">
+
+
+<!-- ================================================= -->
+<!-- SLIDE 1 : NAME -->
+<!-- ================================================= -->
+
+<div class="slide">
+
+    <div class="rakhi">
+        🪢
+    </div>
+
+    <h1>
+        A Special Rakhi Surprise ❤️
+    </h1>
+
+    <p style="margin-bottom:20px;">
+        Enter your name to open your surprise ✨
+    </p>
+
+    <input
+        type="text"
+        id="username"
+        placeholder="Enter your name"
+    >
+
+    <button onclick="checkName()">
+        Open My Surprise 💝
+    </button>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- SLIDE 2 : GREETING -->
+<!-- ================================================= -->
+
+<div class="slide">
+
+    <div class="rakhi">
+        🪢
+    </div>
+
+    <h1 id="greeting">
+    </h1>
+
+    <p>
+        This little surprise is just for you ❤️
+    </p>
+
+    <button onclick="nextSlide()">
+        Start ✨
+    </button>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- SLIDE 3 : PERSONAL MESSAGE -->
+<!-- ================================================= -->
+
+<div class="slide message-slide">
+
+    <h1>
+        Happy Raksha Bandhan 🪢❤️
+    </h1>
+
+    <div
+        class="message"
+        id="message"
+    >
+    </div>
+
+    <button onclick="nextSlide()">
+        Next ❤️
+    </button>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- SLIDE 4 : PHOTO 1 -->
+<!-- ================================================= -->
+
+<div class="slide">
+
+    <img
+        id="photo1"
+        class="photo"
+        src=""
+        alt="Memory"
+    >
+
+    <button onclick="nextSlide()">
+        Next ✨
+    </button>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- SLIDE 5 : PHOTO 2 -->
+<!-- ================================================= -->
+
+<div class="slide">
+
+    <img
+        id="photo2"
+        class="photo"
+        src=""
+        alt="Memory"
+    >
+
+    <button onclick="nextSlide()">
+        Next ❤️
+    </button>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- SLIDE 6 : PHOTO 3 -->
+<!-- ================================================= -->
+
+<div class="slide">
+
+    <img
+        id="photo3"
+        class="photo"
+        src=""
+        alt="Memory"
+    >
+
+    <button onclick="nextSlide()">
+        Next 🥰
+    </button>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- SLIDE 7 : PHOTO 4 -->
+<!-- ================================================= -->
+
+<div class="slide">
+
+    <img
+        id="photo4"
+        class="photo"
+        src=""
+        alt="Memory"
+    >
+
+    <button onclick="nextSlide()">
+        Next ❤️
+    </button>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- FINAL SLIDE -->
+<!-- ================================================= -->
+
+<div class="slide">
+
+    <div class="rakhi">
+        🪢
+    </div>
+
+    <h1 id="finalMessage">
+    </h1>
+
+    <p style="font-size:17px; line-height:1.8; max-width:500px;">
+
+        No matter how much we grow up,
+        <br>
+        you will always be my little sister ❤️
+        <br><br>
+
+        Happy Raksha Bandhan! 🪢✨
+
+    </p>
+
+</div>
+
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- MUSIC -->
+<!-- ================================================= -->
+
+<audio
+    id="song"
+    loop
+    preload="auto"
+>
+
+    <source
+        src="rakhi_song.mp3"
+        type="audio/mpeg"
+    >
+
+</audio>
+
+
+<script>
+
+
+/* ================================================= */
+/* VARIABLES */
+/* ================================================= */
+
+let current = 0;
+
+let selectedSister = "";
+
+const container =
+    document.getElementById("container");
+
+const music =
+    document.getElementById("song");
+
+const totalSlides =
+    document.querySelectorAll(".slide").length;
+
+
+/* ================================================= */
+/* SISTER DATA */
+/* ================================================= */
+
+const sisters = {
+
+    sakshi: {
+
+        name: "Sakshi",
+
+        message: `
+
+        Meri प्यारी Sakshi ❤️<br><br>
+
+        Happy Raksha Bandhan! 🪢✨<br><br>
+
+        Pata nahi hum dono kitni baar ladte hain,
+        kitni baar ek dusre ko irritate karte hain,
+        aur kitni baar ek dusre se argue karte hain 😂
+        but at the end of the day, you are one of the
+        most important people in my life.<br><br>
+
+        Bachpan se lekar aaj tak humne saath me
+        bahut saari memories banayi hain.
+        Kuch memories funny hain, kuch embarrassing hain,
+        aur kuch aisi hain jinhe yaad karke automatically
+        smile aa jaati hai ❤️<br><br>
+
+        Kabhi kabhi shayad main tumhe directly nahi bolta,
+        but I really care about you.
+        Hamesha chahta hu ki tum khush raho,
+        apne dreams achieve karo aur life me bahut aage jao ✨<br><br>
+
+        Aur haan, chahe hum kitna bhi lad le,
+        tumhare liye mera support hamesha rahega.
+        Kisi bhi situation me agar tumhe meri zarurat ho,
+        I'll always be there for you ❤️<br><br>
+
+        Bas hamesha aise hi khush rehna,
+        smile karte rehna aur apne dreams ke peeche jaana.
+        You deserve all the happiness in the world! 🥰<br><br>
+
+        Happy Raksha Bandhan once again, Sakshi! 🪢❤️<br><br>
+
+        Love you, Sis! ❤️
+
+        `,
+
+        photos: [
+
+            "sakshi1.jpeg",
+            "sakshi2.jpeg",
+            "sakshi3.jpeg",
+            "sakshi4.jpeg"
+
+        ]
+
+    },
+
+
+    mitali: {
+
+        name: "Mitali",
+
+        message: `
+
+        Meri प्यारी Mitali ❤️<br><br>
+
+        Happy Raksha Bandhan! 🪢✨<br><br>
+
+        Sibling hona kabhi kabhi bahut annoying hota hai 😂
+        kyunki fights bhi hoti hain, arguments bhi hote hain,
+        aur ek dusre ko irritate karne ke naye naye reasons
+        bhi mil jaate hain.<br><br>
+
+        Lekin in sab ke beech ek cheez hamesha same rahegi —
+        you will always be my sister and someone
+        I will always care about ❤️<br><br>
+
+        Life me hum chahe kitne bhi busy ho jaayein,
+        chahe future me hum kitni bhi different directions
+        me chale jaayein, I hope humare beech ka ye bond
+        kabhi change na ho.<br><br>
+
+        Main dil se wish karta hu ki tumhari life me
+        bahut saari happiness ho, success ho aur
+        tum jo bhi dream karti ho wo sab achieve karo ✨<br><br>
+
+        Aur jab bhi life difficult lage,
+        bas yaad rakhna ki tumhara bhai hamesha
+        tumhare side me khada rahega.
+        Chahe advice chahiye ho, help chahiye ho,
+        ya bas kisi se baat karni ho ❤️<br><br>
+
+        Hamesha smile karna,
+        apna confidence kabhi lose mat karna
+        aur life ko apne way me enjoy karna 🥰<br><br>
+
+        Happy Raksha Bandhan once again, Mitali! 🪢❤️<br><br>
+
+        Love you, Sis! ❤️
+
+        `,
+
+        photos: [
+
+            "mitali1.jpeg",
+            "mitali2.jpeg",
+            "mitali3.jpeg",
+            "mitali4.jpeg"
+
+        ]
+
+    }
+
+};
+
+
+/* ================================================= */
+/* NEXT SLIDE */
+/* ================================================= */
+
+function nextSlide(){
+
+    if(current < totalSlides - 1){
+
+        current++;
+
+        container.style.transform =
+            `translateX(-${current * 100}vw)`;
+
+    }
+
+}
+
+
+/* ================================================= */
+/* CHECK NAME */
+/* ================================================= */
+
+function checkName(){
+
+    let name =
+        document
+        .getElementById("username")
+        .value
+        .trim()
+        .toLowerCase();
+
+
+    /* Check Sakshi */
+
+    if(name === "sakshi"){
+
+        selectedSister = "sakshi";
+
+    }
+
+
+    /* Check Mitali */
+
+    else if(name === "mitali"){
+
+        selectedSister = "mitali";
+
+    }
+
+
+    /* Wrong name */
+
+    else{
+
+        alert(
+            "This surprise is only for Sakshi & Mitali ❤️"
+        );
+
+        return;
+
+    }
+
+
+    /* Get sister data */
+
+    const sister =
+        sisters[selectedSister];
+
+
+    /* Greeting */
+
+    document
+    .getElementById("greeting")
+    .innerHTML =
+        `Happy Raksha Bandhan ${sister.name} 🪢❤️`;
+
+
+    /* Message */
+
+    document
+    .getElementById("message")
+    .innerHTML =
+        sister.message;
+
+
+    /* Photos */
+
+    document
+    .getElementById("photo1")
+    .src =
+        sister.photos[0];
+
+
+    document
+    .getElementById("photo2")
+    .src =
+        sister.photos[1];
+
+
+    document
+    .getElementById("photo3")
+    .src =
+        sister.photos[2];
+
+
+    document
+    .getElementById("photo4")
+    .src =
+        sister.photos[3];
+
+
+    /* Final message */
+
+    document
+    .getElementById("finalMessage")
+    .innerHTML =
+        `Stay Happy ${sister.name} ❤️<br>
+         Keep Smiling Always ✨`;
+
+
+    /* Start music */
+
+    music
+    .play()
+    .then(() => {
+
+        console.log("Music Started");
+
+    })
+    .catch((err) => {
+
+        console.log(
+            "Music blocked:",
+            err
+        );
+
+    });
+
+
+    /* Move to greeting */
+
+    nextSlide();
+
+}
+
+</script>
+
+
+</body>
+
+</html>
